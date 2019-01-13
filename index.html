@@ -1,0 +1,113 @@
+<!doctype HTML>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    </head>
+    <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+    <script src="https://rawgit.com/jeromeetienne/AR.js/master/aframe/build/aframe-ar.min.js"></script>
+    <script src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
+    <script src="https://rawgit.com/nicolocarpignoli/nicolocarpignoli.github.io/master/ar-playground/events.js"></script>
+    <body style='margin : 0px; overflow: hidden;'>
+        <!-- we add detectionMode and matrixCodeType to tell AR.js to recognize barcode markers -->
+        <a-scene embedded arjs='sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;'>
+            
+
+            
+            <a-marker markerhandler emitevents="true" cursor="fuse: false; rayOrigin: mouse" id="animated-marker" type='barcode' value='6'>
+                <a-entity>
+                        <a-box id="wp" position="0 0 -1" scale=".5 .5 .5" cursor-listener
+                        material="src: images/vector.png">
+                            <a-animation
+                            attribute="rotation"
+                            dur="5000"
+                            to="0 360 0"
+                            easing="linear"
+                            repeat="indefinite"></a-animation>
+                        </a-box> 
+                                    
+                    </a-entity>
+                <a-entity>
+                    <a-box id="fb" position=".95 0 -.31" scale=".5 .5 .5" cursor-listener
+                    material="src: images/facebook.jpg">
+                        <a-animation
+                        attribute="rotation"
+                        dur="5000"
+                        to="0 360 0"
+                        easing="linear"
+                        repeat="indefinite"></a-animation>
+                    </a-box> 
+                              
+                </a-entity>
+                     
+                <a-entity>
+                    <a-box id="twit" position=".59 0 .81" scale=".5 .5 .5" cursor-listener
+                    material="src: images/twitter.png">
+                        <a-animation
+                        attribute="rotation"
+                        dur="5000"
+                        to="0 360 0"
+                        easing="linear"
+                        repeat="indefinite"></a-animation>
+                    </a-box>
+                </a-entity>
+                <a-entity>
+                    <a-box id="yt" position="-.59 0 .81" scale=".5 .5 .5" cursor-listener
+                    material="src: images/youtube.jpg">
+                        <a-animation
+                        attribute="rotation"
+                        dur="5000"
+                        to="0 360 0"
+                        easing="linear"
+                        repeat="indefinite"></a-animation>
+                    </a-box>
+                </a-entity>
+                <a-entity>
+                        <a-box id="ig" position="-.95 0 -.31" scale=".5 .5 .5" cursor-listener
+                        material="src: images/instagram.png">
+                            <a-animation
+                            attribute="rotation"
+                            dur="5000"
+                            to="0 360 0"
+                            easing="linear"
+                            repeat="indefinite"></a-animation>
+                        </a-box>
+                </a-entity>
+                
+                
+              
+            </a-marker>
+
+            <!-- use this <a-entity camera> to support multiple-markers, otherwise use <a-marker-camera> instead of </a-marker> -->
+            <a-entity camera></a-entity>
+        </a-scene>
+    </body>
+
+    <script>
+    var boxEl = document.getElementById('fb');
+    boxEl.addEventListener('click', function () {
+        //boxEl.setAttribute('scale', {x: 2, y: 2, z: 2});
+        window.open("https://www.facebook.com/Vectoridmx/");
+    });
+
+    var boxEl = document.getElementById('twit');
+    boxEl.addEventListener('click', function () {
+        //boxEl.setAttribute('scale', {x: 2, y: 2, z: 2});
+        window.open("https://twitter.com/arianagrande");
+    });
+    var boxEl = document.getElementById('yt');
+    boxEl.addEventListener('click', function () {
+        //boxEl.setAttribute('scale', {x: 2, y: 2, z: 2});
+        window.open("https://www.youtube.com/watch?v=if6u3YxTXXQ");
+    });
+    var boxEl = document.getElementById('wp');
+    boxEl.addEventListener('click', function () {
+        //boxEl.setAttribute('scale', {x: 2, y: 2, z: 2});
+        window.open("https://www.vectorid.mx/");
+    });
+    var boxEl = document.getElementById('ig');
+    boxEl.addEventListener('click', function () {
+        //boxEl.setAttribute('scale', {x: 2, y: 2, z: 2});
+        window.open("https://www.instagram.com/arianagrande/");
+    });
+    </script>
+</html>
