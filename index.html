@@ -98,7 +98,6 @@
     boxEl1.addEventListener('click', function (e) {
         //boxEl.setAttribute('scale', {x: 2, y: 2, z: 2});
         window.open("https://www.facebook.com/Vectoridmx/");
-        console.log("elemento touchado");
     });
 
     var boxEl2 = document.getElementById('wa');
@@ -122,10 +121,14 @@
         window.open("https://www.instagram.com/vectorinovaciondigital/");
     });
 
-    var boxEl5 = document.getElementById('powered');
-    boxEl5.addEventListener('click', function () {
+    var boxEl6 = document.getElementById('powered');
+    boxEl6.addEventListener('click', function () {
         //boxEl.setAttribute('scale', {x: 2, y: 2, z: 2});
         window.open("https://www.vectorid.mx");
     });
+
+    var altura = document.body.scrollHeight;
+    boxEl6.setAttribute('position',{x: -.05, y: altura/2, z: -5});
+
     </script>
 </html>
