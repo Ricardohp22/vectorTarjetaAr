@@ -10,8 +10,10 @@
     <body style='margin : 0px; overflow: hidden;'>
         <!-- we add detectionMode and matrixCodeType to tell AR.js to recognize barcode markers -->
         <a-scene embedded arjs='sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;'>
+            <a-entity>
+                <a-text value="Que onda" ></a-text>
+            </a-entity>
             
-            <a-text value="Que onda" heigth="10px" width="10px"></a-text>
             
             <a-marker markerhandler emitevents="true" cursor="fuse: false; rayOrigin: mouse" id="animated-marker" type='barcode' value='6'>
                 <a-entity >
