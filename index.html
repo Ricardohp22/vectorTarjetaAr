@@ -82,7 +82,8 @@
                 
               
             </a-marker>
-            <a-plane position="0 -1.5 -5" width="1" height=".2"></a-plane>
+            <a-plane id="powered" position="0 -1.7 -5" width="1" height=".3"
+            material="src: images/vector.jpg"></a-plane>
             <!-- use this <a-entity camera> to support multiple-markers, otherwise use <a-marker-camera> instead of </a-marker> -->
             <a-entity camera>
                 
@@ -119,6 +120,12 @@
     boxEl5.addEventListener('click', function () {
         //boxEl.setAttribute('scale', {x: 2, y: 2, z: 2});
         window.open("https://www.instagram.com/vectorinovaciondigital/");
+    });
+
+    var boxEl5 = document.getElementById('powered');
+    boxEl5.addEventListener('click', function () {
+        //boxEl.setAttribute('scale', {x: 2, y: 2, z: 2});
+        window.open("https://www.vectorid.mx");
     });
     </script>
 </html>
